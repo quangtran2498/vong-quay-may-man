@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import WheelComponent from "react-wheel-of-prizes";
+// import "react-wheel-of-prizes/dist/index.css";
 function App() {
+  const segments = [
+    "quang",
+    "huy",
+    "viet",
+    "luan",
+    "hiep",
+    "quang kinh",
+    "hao",
+    "duc",
+  ];
+  const segColors = [
+    "#EE4040",
+    "#F0CF50",
+    "#815CD1",
+    "#3DA5E0",
+    "#34A24F",
+    "#F9AA1F",
+    "#EC3F3F",
+    "#FF9000",
+  ];
+  const onFinished = (winner) => {
+    console.log(winner);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <WheelComponent
+        segments={segments}
+        segColors={segColors}
+        winningSegment=""
+        onFinished={(winner) => onFinished(winner)}
+        primaryColor="black"
+        contrastColor="white"
+        buttonText="Quay"
+        isOnlyOnce={false}
+        size={290}
+        upDuration={100}
+        downDuration={300}
+        fontFamily="Arial"
+      />
     </div>
   );
 }
