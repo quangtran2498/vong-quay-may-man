@@ -4,14 +4,14 @@ import WheelComponent from "react-wheel-of-prizes";
 // import "react-wheel-of-prizes/dist/index.css";
 function App() {
   const segments = [
-    "quang",
-    "huy",
-    "viet",
-    "luan",
-    "hiep",
-    "quang kinh",
-    "hao",
-    "duc",
+    "bánh mỳ chảo",
+    "bún chả",
+    "nem lụi",
+    "phở",
+    "lẩu",
+    "Phở Cuốn",
+    "Bánh Mì Sốt Vang",
+    "không ăn gì",
   ];
   const segColors = [
     "#EE4040",
@@ -35,7 +35,7 @@ function App() {
         onFinished={(winner) => onFinished(winner)}
         primaryColor="black"
         contrastColor="white"
-        buttonText="Quay"
+        buttonText="Để ông trời quyết định"
         isOnlyOnce={false}
         size={290}
         upDuration={100}
